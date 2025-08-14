@@ -16,6 +16,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 
 	<body id="body">
+	<div id="anchor-list" class="anchor-list drawer"></div>
 		<Header />
 		<div class="container">
 		<div class="row">
@@ -23,7 +24,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<article class="post">
 				<div class="post-content">
 					<div class="title">
-						<h1 class="post-title">{title}</h1>
+						<div class="post-title">{title}</div>
 					</div>
 					<slot />
 				</div>
@@ -32,5 +33,119 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</div>
 		</div>
 		<Footer />
+		<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headings = document.querySelectorAll('h1, h2, h3, h4');
+      const toc = document.getElementById('anchor-list');
+      const ul = document.createElement('ul');
+			ul.className ="index-menu-list"
+
+      headings.forEach(h => {
+        if (!h.id) {
+          h.id = h.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+        }
+        const li = document.createElement('li');
+        li.className = "index-menu-item"
+        const a = document.createElement('a');
+        a.textContent = h.textContent;
+        a.href = `#${h.id}`;
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          document.getElementById(h.id).scrollIntoView({ behavior: 'smooth' });
+        });
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      toc.appendChild(ul);
+    });
+  </script>
+	<script>
+  const anchorList = document.getElementById("anchor-list");
+  let hideTimeout = null;
+  let animationFrame = null;
+  let lastScrollY = window.scrollY;
+
+  function showAnchorList() {
+    anchorList.classList.add("visible");
+    anchorList.classList.add("floating");
+
+    // 清除旧的隐藏定时器
+    if (hideTimeout) clearTimeout(hideTimeout);
+
+    // 3 秒后隐藏
+    hideTimeout = setTimeout(() => {
+      anchorList.classList.remove("visible");
+    }, 5000);
+
+    // 回弹动画移除
+    if (animationFrame) cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+      anchorList.classList.remove("floating");
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    const currentY = window.scrollY;
+    if (Math.abs(currentY - lastScrollY) > 5) {
+      showAnchorList();
+      lastScrollY = currentY;
+    }
+  });
+
+  const OFFSET = -80; // 你自己的导航高度
+
+document.querySelectorAll('#anchor-list a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      const top = targetEl.getBoundingClientRect().top + window.scrollY + OFFSET;
+
+      window.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
+const anchors = document.querySelectorAll('#anchor-list a');
+const sections = Array.from(anchors).map(a => {
+  const id = a.getAttribute('href').substring(1);
+  return document.getElementById(id);
+});
+
+// 创建 IntersectionObserver 观察 section 是否进入视口
+const observer = new IntersectionObserver(entries => {
+  let visibleSection = null;
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      visibleSection = entry.target;
+    }
+  });
+
+  if (visibleSection) {
+    const id = visibleSection.id;
+    anchors.forEach(anchor => {
+      anchor.classList.toggle('active', anchor.getAttribute('href') === `#${id}`);
+    });
+  }
+}, {
+  rootMargin: '-80px 0px -70% 0px',  // 上边偏移固定导航高度
+  threshold: 0.1
+});
+
+
+// 开始监听每个 section
+sections.forEach(section => {
+  if (section) observer.observe(section);
+});
+
+</script>
 	</body>
 </html>

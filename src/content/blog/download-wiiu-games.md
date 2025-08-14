@@ -2,7 +2,6 @@
 title: "如何下载WiiU官网纯净游戏并转换Cemu支持的游戏包"
 description: "如何下载WiiU官网纯净游戏并转换Cemu支持的游戏包"
 pubDate: "2025-08-14"
-heroImage: "/blog-placeholder-3.jpg"
 ---
 
 ### 所用工具
@@ -15,8 +14,9 @@ FunKiiU是python脚本，兼容Python 2.7 - 3，[这篇文章][4]介绍了怎么
 
 只需要执行下面命令就会在当前目录下创建install文件夹，这里面就是所有下载的游戏包
 
-    python FunKiiU.py -title 0005000e101c9300 -key c607006fc382226a002659db5fa33e8d
-
+```shell
+python FunKiiU.py -title 0005000e101c9300 -key c607006fc382226a002659db5fa33e8d
+```
 开始下载
 ![key05.png][5]
 title key 从这网站[WiiU Title Key DB][6]进去查找，按需找到替换想要的游戏title和key
@@ -45,13 +45,13 @@ content
   [1]: https://github.com/llakssz/FunKiiU
   [2]: https://github.com/VitaSmith/cdecrypt
   [3]: https://www.wiiuemulator.com/Game-Key-Database.htm
-  [4]: https://caicaiying.com/archives/BCML.html
-  [5]: https://caicaiying.com/usr/uploads/2025/05/1308899700.png
+  [4]: ../bcml
+  [5]: /img/1308899700.png
   [6]: https://www.wiiuemulator.com/Game-Key-Database.htm
-  [7]: https://caicaiying.com/usr/uploads/2025/05/1240419938.png
-  [8]: https://caicaiying.com/usr/uploads/2025/05/3138530599.png
-  [9]: https://caicaiying.com/usr/uploads/2025/05/13435778.png
-  [10]: https://caicaiying.com/usr/uploads/2025/05/1936986271.png
-  [11]: https://caicaiying.com/usr/uploads/2025/05/3304025844.png
-  [12]: https://caicaiying.com/usr/uploads/2025/05/3674555083.png
-  [13]: https://caicaiying.com/archives/The_Legend_of_Zelda_Breath_of_the_Wild_cemu_pc.html
+  [7]: /img/1240419938.png
+  [8]: /img/3138530599.png
+  [9]: /img/13435778.png
+  [10]: /img/1936986271.png
+  [11]: /img/3304025844.png
+  [12]: /img/3674555083.png
+  [13]: ../the-legend-of-zelda-breath-of-the-wild-cemu-pc

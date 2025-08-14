@@ -11,28 +11,35 @@
  * --------------- */
 body {
   background-color: black;
-  color: #FFCB30;
+  color: #ffcb30;
   /* font-family: "JiangXizhuokai", Helvetica, Arial, sans-serif; */
-  font-family: "JiangXizhuokai", "Droid Serif", Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "WenQuanYi Micro Hei","Microsoft Yahei", serif;
+  font-family: 'JiangXizhuokai', 'Droid Serif', Georgia, 'Times New Roman',
+    'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN',
+    'WenQuanYi Micro Hei', 'Microsoft Yahei', serif;
   font-size: 100%;
   padding: 0 2em 2em 2em;
 }
 
 a {
-  color: #FFCB30;
+  color: #ffcb30;
   text-decoration: none;
 }
-a:hover, a:active {
-  color: #BAAF8C;
+a:hover,
+a:active {
+  color: #baaf8c;
 }
 
-pre, code { 
-  font-family: Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
-  font-size: .92857em;
+pre,
+code {
+  font-family: Menlo, Monaco, Consolas, 'Lucida Console', 'Courier New',
+    monospace;
+  font-size: 14px;
 }
-code { 
+code {
   overflow-x: auto; /* 允许水平滚动 */
-  padding: 2px 4px; color: #BAAF8C; }
+  padding: 2px 4px;
+  color: #baaf8c;
+}
 pre {
   padding: 8px;
   overflow: auto;
@@ -41,14 +48,14 @@ pre {
 pre code {
   display: block;
   padding: 3px;
-  color: #BAAF8C;
+  color: #baaf8c;
 }
 
 blockquote {
   margin: 1em 0;
   padding-left: 1.5em;
   border-left: 4px solid #eee;
-  color: #BAAF8C;
+  color: #baaf8c;
 }
 
 table {
@@ -64,17 +71,24 @@ table th {
   background: #f3f3f3;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "JiangXizhuokai", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei","Microsoft Yahei", sans-serif;
-  color: #FFCB30;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'JiangXizhuokai', 'Helvetica Neue', Helvetica, Arial,
+    'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei',
+    sans-serif;
+  color: #ffcb30;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
 textarea {
-  color: #BAAF8C;
+  color: #baaf8c;
   padding: 10px;
   width: 100%;
   background-color: #171717;
@@ -87,7 +101,8 @@ textarea {
   resize: vertical;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
 }
 
@@ -96,7 +111,7 @@ textarea:focus, input:focus {
 .post-content a,
 .widget a,
 .comment-content a {
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 }
 
 .post-meta a:hover,
@@ -110,15 +125,14 @@ textarea:focus, input:focus {
  * Header
  * --------------- */
 
-
 #logo {
   color: #333;
   font-size: 2.5em;
 }
 #logo img {
-    max-height: 100px;
+  max-height: 100px;
 }
-.sologan{
+.sologan {
   height: 100px;
 }
 .logo-img {
@@ -127,10 +141,19 @@ textarea:focus, input:focus {
   font-size: 2.5em;
 }
 .logo-img img {
-    max-height: 100px;
-    border: 5px solid transparent;
-    border-image: conic-gradient(from 0deg, rgb(235, 165, 165), yellow, green, rgb(11, 144, 156), rgb(167, 40, 181), rgb(226, 224, 72)) 1;
-    border-image-slice: 1;
+  max-height: 100px;
+  border: 5px solid transparent;
+  border-image: conic-gradient(
+      from 0deg,
+      rgb(235, 165, 165),
+      yellow,
+      green,
+      rgb(11, 144, 156),
+      rgb(167, 40, 181),
+      rgb(226, 224, 72)
+    )
+    1;
+  border-image-slice: 1;
 }
 
 .site-title {
@@ -138,19 +161,19 @@ textarea:focus, input:focus {
   margin-left: 20px;
 }
 
-.site-title h2{
+.site-title .site-title-txt {
   font-size: 1.5em;
   font-weight: normal;
   margin: 0.5em 0;
   padding: 0;
 }
 
-.site-title p{
+.site-title p {
   margin: 0;
   padding: 0;
 }
 .description {
-  margin: .5em 0 0;
+  margin: 0.5em 0 0;
   color: #999;
   font-style: italic;
 }
@@ -172,14 +195,13 @@ textarea:focus, input:focus {
   display: inline-block;
 }
 
-.nav-menu-sub{}
-.nav-menu-sub img{
+.nav-menu-sub img {
   width: 20px;
   height: 20px;
 }
 
 /* Search */
-.site-search{
+.site-search {
   float: right;
   margin-top: 15px;
 }
@@ -194,7 +216,7 @@ textarea:focus, input:focus {
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  border-bottom: 1px dashed #FFCB30;
+  border-bottom: 1px dashed #ffcb30;
   border-radius: 0;
   color: gray;
 }
@@ -219,9 +241,7 @@ textarea:focus, input:focus {
   text-indent: -9999em;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #search button {
     background-image: url(img/icon-search@2x.png);
     -webkit-background-size: 24px 24px;
@@ -231,14 +251,10 @@ textarea:focus, input:focus {
   }
 }
 
-
 /* ------------------
  * Main
  * --------------- */
 
-.post {
-  padding: 15px 0 20px;
-}
 .post-list {
   list-style: none;
   margin: 0;
@@ -248,33 +264,34 @@ textarea:focus, input:focus {
   margin: 2em 0;
   padding: 0;
 }
-.post-list li h2{
+.post-list li h2 {
   font-size: 1em;
   font-weight: normal;
   margin: 0;
   padding: 0;
 }
-.post-list li span{
+.post-list li span {
   font-size: 12px;
-  color: #B1B0AF;
+  color: #b1b0af;
   margin: 0;
   padding-left: 2em;
 }
 .post-title {
-  margin: .83em 0;
+  color: #ffcb30;
+  margin: 0.83em 0;
   font-size: 1.5em;
 }
 .post-meta {
   margin-top: -0.5em;
   padding: 0;
   color: #999;
-  font-size: .92857em;
+  font-size: 0.92857em;
 }
 .post-meta li {
   display: inline-block;
   margin: 0 8px 0 0;
   padding-left: 12px;
-  border-left: 1px solid #EEE;
+  border-left: 1px solid #eee;
 }
 .post-meta li:first-child {
   margin-left: 0;
@@ -282,9 +299,8 @@ textarea:focus, input:focus {
   border: none;
 }
 .post-content {
-  margin: 2em 0;
   line-height: 2;
-  color: #BAAF8C;
+  color: #baaf8c;
 }
 .post .tags {
   clear: both;
@@ -301,7 +317,7 @@ textarea:focus, input:focus {
   box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease-out, opacity 0.4s ease-out;
   will-change: transform, opacity;
-  pointer-events: none;        /* 默认不响应事件 */
+  pointer-events: none; /* 默认不响应事件 */
   opacity: 0;
   transform: translateX(100%); /* 初始右侧滑出状态 */
 }
@@ -313,32 +329,35 @@ textarea:focus, input:focus {
 }
 #anchor-list a.active {
   font-weight: bold;
-  color: #FFCB30; /* 或你自定义的主题色 */
+  color: #ffcb30; /* 或你自定义的主题色 */
 }
 .anchor-list.floating {
   transform: translateX(0) translateY(20px); /* 加下沉动画 */
 }
 
-
-.index-menu-list{
+.index-menu-list {
   list-style: none;
   margin: 0;
   padding-left: 1em;
 }
-.index-menu-item{
+.index-menu-item {
   margin: 1.5em 0;
-} 
-.index-menu-link{
-  color: #BAAF8C;
+}
+.index-menu-link {
+  color: #baaf8c;
   text-decoration: none;
 }
-.menu-target-fix {display:block; position:relative; top:-60px; }
+.menu-target-fix {
+  display: block;
+  position: relative;
+  top: -60px;
+}
 
-.tags-list-title{
+.tags-list-title {
   font-size: 1.2em;
   color: #c7bc2e;
 }
-.tags-list{
+.tags-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -347,7 +366,7 @@ textarea:focus, input:focus {
   display: inline-block;
   margin: 0 10px 10px 0;
   padding: 5px 10px;
-  background: #1B1B1B;
+  background: #1b1b1b;
   border-radius: 3px;
 }
 
@@ -399,13 +418,13 @@ textarea:focus, input:focus {
   line-height: 30px;
 }
 .page-navigator a:hover {
-  background: #EEE;
+  background: #eee;
   text-decoration: none;
 }
 
 .page-navigator .current a {
   color: #444;
-  background: #EEE;
+  background: #eee;
 }
 
 /* ------------------
@@ -414,7 +433,8 @@ textarea:focus, input:focus {
 #comments {
   padding-top: 15px;
 }
-.comment-list, .comment-list ol {
+.comment-list,
+.comment-list ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -435,14 +455,14 @@ textarea:focus, input:focus {
 }
 .comment-list li .comment-reply {
   text-align: right;
-  font-size: .92857em;
+  font-size: 0.92857em;
 }
-.comment-meta{
+.comment-meta {
   margin: 1em 0;
 }
 .comment-meta a {
   color: #999;
-  font-size: .92857em;
+  font-size: 0.92857em;
 }
 .comment-author {
   font-size: 1.2em;
@@ -467,16 +487,16 @@ textarea:focus, input:focus {
 .respond .cancel-comment-reply {
   float: right;
   margin-top: 15px;
-  font-size: .92857em;
+  font-size: 0.92857em;
 }
 #comment-form label {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   font-weight: bold;
 }
 #comment-form .required:after {
-  content: " *";
-  color: #C00;
+  content: ' *';
+  color: #c00;
 }
 
 /* ------------------
@@ -502,7 +522,6 @@ textarea:focus, input:focus {
   margin-left: 15px;
 }
 
-
 /* ------------------
  * Footer 
  * --------------- */
@@ -513,7 +532,6 @@ textarea:focus, input:focus {
   color: #999;
 }
 
-
 /* -----------------
  * Error page
  * -------------- */
@@ -522,43 +540,49 @@ textarea:focus, input:focus {
   margin-bottom: 100px;
 }
 
-
 /* -----------------
  * Content format
  *--------------- */
-.post-content, .comment-content {
-  color: #BAAF8C;
+.post-content,
+.comment-content {
+  color: #baaf8c;
   line-height: 2;
   word-wrap: break-word;
 }
-.post-content h2, .comment-content h2 {
+.post-content h2,
+.comment-content h2 {
   font-size: 1.28571em;
 }
-.post-content img, .comment-content img,
-.post-content video, .comment-content video {
-  border: 2px solid #FFCB30;
+.post-content img,
+.comment-content img,
+.post-content video,
+.comment-content video {
+  border: 2px solid #ffcb30;
   max-width: 300px;
   cursor: zoom-in;
   transition: 0.2s;
+  display: block;
+  margin: 10px 0;
 }
 .post-content a img,
 .comment-content a img {
-  background: #FFF;
+  background: #fff;
   position: relative;
-  bottom: -4px;  /* hidden img parent link border  */
+  bottom: -4px; /* hidden img parent link border  */
 }
-.post-content hr, .comment-content hr {
+.post-content hr,
+.comment-content hr {
   margin: 2em auto;
   width: 100px;
-  border: 1px solid #E9E9E9;
+  border: 1px solid #e9e9e9;
   border-width: 2px 0 0 0;
 }
-
 
 /* -----------------
  * Misc
  *--------------- */
-.aligncenter, div.aligncenter {
+.aligncenter,
+div.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -576,32 +600,32 @@ img.alignright {
   margin: 0 0 0 15px;
 }
 
-.submit{
-  background-color: #FFCB30;
-    padding: 0.56em;
-    color: black;
+.submit {
+  background-color: #ffcb30;
+  padding: 0.56em;
+  color: black;
 }
 
 /* -----------------
  * Responsive
  *--------------- */
 @media (max-width: 767px) {
-  body{
+  body {
     padding: 0 1em 1em 1em;
   }
-  .anchor-list{
+  .anchor-list {
     display: none;
   }
-  #nav-menu{
+  #nav-menu {
     display: none;
   }
-  .sologan{
+  .sologan {
     height: auto;
   }
-  .logo-img{
+  .logo-img {
     float: none;
   }
-  .site-title{
+  .site-title {
     float: none;
     margin-left: 0;
   }
@@ -613,22 +637,22 @@ img.alignright {
 }
 
 @media (max-width: 768px) {
-  body{
+  body {
     padding: 0 1em 1em 1em;
   }
-  .anchor-list{
+  .anchor-list {
     display: none;
   }
-  #nav-menu{
+  #nav-menu {
     display: none;
   }
-  .sologan{
+  .sologan {
     height: auto;
   }
-  .logo-img{
+  .logo-img {
     float: none;
   }
-  .site-title{
+  .site-title {
     float: none;
     margin-left: 0;
   }
@@ -636,20 +660,18 @@ img.alignright {
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  .site-title h2{
+  .site-title .site-title-txt {
     font-size: 1.2em;
   }
-  .site-title p{
+  .site-title p {
     text-align: left;
   }
-  .entry-title-date{
+  .entry-title-date {
     display: none;
   }
-
 }
 
 @media (min-width: 992px) {
-
 }
 
 @media (min-width: 1200px) {
@@ -658,13 +680,13 @@ img.alignright {
   } */
 }
 
-
 /*
 * Hide from both screenreaders and browsers: h5bp.com/u
 */
 .hidden {
   display: none !important;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 /*
 * Hide only visually, but have it available for screenreaders: h5bp.com/v
@@ -676,7 +698,8 @@ img.alignright {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px; }
+  width: 1px;
+}
 
 /*
 * Extends the .sr-only class to allow the element to be focusable
@@ -689,10 +712,12 @@ img.alignright {
   margin: 0;
   overflow: visible;
   position: static;
-  width: auto; }
+  width: auto;
+}
 
 /*
 * Hide visually and from screenreaders, but maintain layout
 */
 .invisible {
-  visibility: hidden; }
+  visibility: hidden;
+}
