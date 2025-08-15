@@ -1,7 +1,7 @@
 ---
 title: "如何下载WiiU官网纯净游戏并转换Cemu支持的游戏包"
 description: "如何下载WiiU官网纯净游戏并转换Cemu支持的游戏包"
-pubDate: "2025-08-14"
+pubDate: "2025-08-11"
 ---
 
 ### 所用工具

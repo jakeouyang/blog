@@ -1,7 +1,7 @@
 ---
 title: "BCML塞尔达传说：荒野之息Mod管理器教程"
 description: "BCML塞尔达传说：荒野之息Mod管理器教程"
-pubDate: "2025-08-14"
+pubDate: "2025-08-13"
 ---
 
 ### 环境安装
